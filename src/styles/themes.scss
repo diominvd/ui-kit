@@ -1,0 +1,32 @@
+/*
+Two tokens with the same root generate one parent 
+color, which must be defined in each theme based 
+on the values of the child tokens.
+
+Example:
+--bg-color (parent color)
+  -> --bg-color-light (child token)
+  -> --bg-color-dark (child token)
+
+The values of the child tokens are defined in the :root.
+*/
+
+[data-theme='light'] {
+  --example-color: var(--example-color-light);
+}
+
+[data-theme='dark'] {
+  --example-color: var(--example-color-dark);
+}
+
+/*
+Each color should have two identical tokens with the 
+addition of the theme name at the end.
+*/
+:root {
+  /* light theme tokens */
+  --example-color-light: white;
+
+  /* dark theme tokens */
+  --example-color-dark: black;
+}
