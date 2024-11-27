@@ -1,0 +1,31 @@
+div.link__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  &:hover { 
+    opacity: 70%;
+    transition: all 0.3s ease;
+  }
+
+  a.link {
+    &.color-light { color: var(--text-100) }
+    &.color-gray { color: var(--text-90) }
+    &.color-yellow { color: var(--yellow-100) }
+    &.color-violet { color: var(--violet-100) }
+    &.color-red { color: var(--red-100) }
+    &.color-green { color: var(--green-100) }
+    &.color-blue { color: var(--blue-100) }
+    &.color-pink { color: var(--pink-100) }
+  
+    &.underline-false { text-decoration: none }
+    &.underline-true { text-decoration: underline 1px solid }
+  }
+
+  img.link__icon {
+    width: 12px;
+    height: 12px;
+  }
+}
