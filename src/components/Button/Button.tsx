@@ -19,7 +19,7 @@ interface ButtonInterface {
  * @param disabled
  * @param mode style of button
  * @param color color of button background
- * @param icon recommended icon level: 5 (12px) (optional)
+ * @param icon recommended icon level: 4 (16px) (optional)
  * @param iconPosition position of icon (optional)
  * @param style additional CSS properties (optional)
  * @example Without icon
