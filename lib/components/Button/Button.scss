@@ -1,0 +1,82 @@
+button.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding: 6px 16px;
+  border: none;
+  outline: none;
+
+  font-size: 14px;
+
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover { opacity: 80% }
+  &:disabled { opacity: 50% }
+
+  &.mode-base {
+    &.color-surface-0 {
+      color: var(--text-0);
+      background-color: var(--surface-0);
+    }
+    &.color-yellow {
+      color: var(--text-100);
+      background-color: var(--yellow-100);
+    }
+    &.color-violet {
+      color: var(--text-100);
+      background-color: var(--violet-100);
+    }
+    &.color-red {
+      color: var(--text-100);
+      background-color: var(--red-100);
+    }
+    &.color-green {
+      color: var(--text-100);
+      background-color: var(--green-100);
+    }
+    &.color-blue {
+      color: var(--text-100);
+      background-color: var(--blue-100);
+    }
+    &.color-pink {
+      color: var(--text-100);
+      background-color: var(--pink-100);
+    }
+  }
+
+  &.mode-outline {
+    &.color-surface-100 {
+      color: var(--text-100);
+      border: 1px solid var(--surface-0) !important;
+    }
+    &.color-yellow {
+      color: var(--text-100);
+      border: 1px solid var(--yellow-100) !important;
+    }
+    &.color-violet {
+      color: var(--text-100);
+      border: 1px solid var(--violet-100) !important;
+    }
+    &.color-red {
+      color: var(--text-100);
+      border: 1px solid var(--red-100) !important;
+    }
+    &.color-green {
+      color: var(--text-100);
+      border: 1px solid var(--green-100) !important;
+    }
+    &.color-blue {
+      color: var(--text-100);
+      border: 1px solid var(--blue-100) !important;
+    }
+    &.color-pink {
+      color: var(--text-100);
+      border: 1px solid var(--pink-100) !important;
+    }
+  }
+}

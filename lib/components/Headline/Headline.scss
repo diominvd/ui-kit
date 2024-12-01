@@ -1,0 +1,17 @@
+p.headline {
+  /* Level */
+  &.level-1 { font-size: var(--headline-large) }
+  &.level-2 { font-size: var(--headline-medium) }
+  &.level-3 { font-size: var(--headline-regular) }
+  &.level-4 { font-size: var(--headline-small) }
+
+  /* Color */
+  &.color-text-100 { color: var(--text-100) }
+  &.color-text-90 { color: var(--text-90) }
+  &.color-dark-text-80 { color: var(--text-0) }
+
+  /* Weight */
+  &.weight-regular { font-weight: var(--weight-regular) }
+  &.weight-semibold { font-weight: var(--weight-semibold) }
+  &.weight-extrabold { font-weight: var(--weight-extrabold) }
+}

@@ -1,0 +1,9 @@
+.vscode
+lib
+node_modules
+public
+.gitignore
+eslint.config.mjs
+package-lock.json
+tsconfig.json
+vite.config.ts
