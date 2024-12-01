@@ -1,4 +1,4 @@
-![Preview image](./public/preview.jpg)
+![Preview image](./images/preview.jpg)
 
 # Guide to using the ui-kit
 
@@ -20,8 +20,8 @@ Now you can use the components from the library in your project:
 ```tsx
 import { Headline, Text } from '@diominvd/ui-kit';
 
-export const MyComponent: React.FC = ({}) => {
-  return (}
+export const MyComponent: React.FC<ComponentInterface> = ({ ...props }) => {
+  return (
     <>
       <Headline level={1} color='light' weight='extrabold'>Some Headline</Headline>
       <Text level={1} color='gray' weight='regular'>Some text can be placed here</Text>

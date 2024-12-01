@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Clear cache
+        run: npm cache clear --force
+
+      - name: Install sass
+        run: npm i -g sass-embedded-linux-x64 && npm i sass-embedded-linux-x64
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Create zip
+        run: zip -r package-v${{ secrets.CURRENT_VERSION }}.zip dist
+
+      - name: Create tar.gz archive
+        run: tar -czf package-v${{ secrets.CURRENT_VERSION }}.tar.gz -C dist .
+
+      - name: Release ${{ secrets.CURRENT_VERSION }}
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          files: |
+            package-v${{ secrets.CURRENT_VERSION }}.zip
+            package-v${{ secrets.CURRENT_VERSION }}.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.BUILD_TOKEN }}
