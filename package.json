@@ -22,7 +22,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
+    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
+    "publish": "npm run build && npm publish --access public"
   },
   "peerDependencies": {
     "react": "^18.3.1",
