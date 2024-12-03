@@ -38,3 +38,7 @@ export const MyComponent: React.FC<ComponentInterface> = ({ ...props }) => {
 - [Icon](./lib/components/Icon/README.md)
 - [Link](./lib/components/Link/README.md)
 - [Text](./lib/components/Text/README.md)
+
+---
+
+Current version 1.0.2
